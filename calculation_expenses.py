@@ -40,8 +40,8 @@ initial_cells = st.number_input('Initial Number of Cells', value=1e4, format='%.
 doubling_time = st.number_input('Doubling Time (days)', value=1.5)
 media_cost_per_bottle = st.number_input('Cost per Bottle of Media ($)', value=300.0, format='%.2f')
 bottle_volume = st.number_input('Volume per Bottle (liters)', value=0.5, format='%.3f')
-max_cells_per_well = st.number_input('Max Cells per Well', value=1e5, format='%f')
-wells_per_plate = st.number_input('Wells per Plate', value=96, format='%f')
+max_cells_per_well = st.number_input('Max Cells per Well', value=1e5, )
+wells_per_plate = st.number_input('Wells per Plate', value=96)
 media_change_interval_days = st.number_input('Media Change Interval (days)', value=3, format='%.0f')
 
 # Perform calculations
