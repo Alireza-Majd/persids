@@ -8,8 +8,7 @@ from matplotlib.ticker import StrMethodFormatter
 # Streamlit title and description
 st.title("Cell Growth and Cost Analysis")
 st.write("""
-This app simulates the growth of cells and calculates the associated costs over time. 
-You can adjust the parameters below to see how they affect the outcomes.
+Media Usage From Day 30 to Day 50
 """)
 
 # Input parameters with default values
@@ -126,7 +125,7 @@ st.pyplot(fig)
 
 # Save the plot as a PDF and provide a download link
 plt.savefig('cell_growth_cost_analysis.pdf')
-st.write("You can download the plot as a PDF:")
+st.write("Plot as a PDF:")
 st.download_button(
     label="Download PDF",
     data=open('cell_growth_cost_analysis.pdf', 'rb').read(),
@@ -135,7 +134,7 @@ st.download_button(
 )
 
 # Provide a download link for the data as CSV
-st.write("You can download the data as a CSV:")
+st.write("Results as a CSV:")
 st.download_button(
     label="Download data as CSV",
     data=df.to_csv().encode('utf-8'),
