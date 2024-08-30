@@ -15,7 +15,7 @@ You can adjust the parameters below to see how they affect the outcomes.
 # Input parameters with default values
 N0 = st.number_input("Initial number of cells", value=1_500_000)
 Nf = st.number_input("Final number of cells after 4 days", value=3 * N0)
-T = st.number_input("Time over which cells triple (days)", value=4)
+T = st.number_input("Time over which cells replates (days)", value=4)
 initial_dishes = st.number_input("Initial number of dishes", value=3)
 media_per_dish_ml = st.number_input("Media per dish (ml)", value=10)
 bottle_volume_ml = st.number_input("Bottle volume (ml)", value=500)
@@ -132,13 +132,4 @@ st.download_button(
     data=open('cell_growth_cost_analysis.pdf', 'rb').read(),
     file_name='cell_growth_cost_analysis.pdf',
     mime='application/pdf'
-)
-
-# Provide a download link for the data as CSV
-st.write("You can download the data as a CSV:")
-st.download_button(
-    label="Download data as CSV",
-    data=df.to_csv().encode('utf-8'),
-    file_name='cell_growth_cost_analysis.csv',
-    mime='text/csv'
 )
