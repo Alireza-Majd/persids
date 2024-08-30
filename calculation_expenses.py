@@ -35,14 +35,14 @@ This app calculates the cost of a cell differentiation protocol based on various
 """)
 
 # Input widgets
-target_cells = st.number_input('Target Number of Cells', value=1e6, format='%.0f')
-initial_cells = st.number_input('Initial Number of Cells', value=1e4, format='%.0f')
+target_cells = st.number_input('Target Number of Cells', value=1e6)
+initial_cells = st.number_input('Initial Number of Cells', value=1e4)
 doubling_time = st.number_input('Doubling Time (days)', value=1.5)
 media_cost_per_bottle = st.number_input('Cost per Bottle of Media ($)', value=300.0, format='%.2f')
 bottle_volume = st.number_input('Volume per Bottle (liters)', value=0.5, format='%.3f')
 max_cells_per_well = st.number_input('Max Cells per Well', value=1e5, )
 wells_per_plate = st.number_input('Wells per Plate', value=96)
-media_change_interval_days = st.number_input('Media Change Interval (days)', value=3, format='%.0f')
+media_change_interval_days = st.number_input('Media Change Interval (days)', value=3)
 
 # Perform calculations
 cumulative_costs, total_days, total_bottles_used = calculate_differentiation_cost(target_cells, initial_cells, doubling_time, media_cost_per_bottle, bottle_volume, max_cells_per_well, wells_per_plate, media_change_interval_days)
